@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.app.message_app;
+package com.app.messageApp;
 
 import java.sql.Connection;
 
@@ -10,10 +10,10 @@ import java.sql.Connection;
  *
  * @author naya
  */
-public class Message_app {
+public class MessageApp {
 
     public static void main(String[] args) {
-        Connection_bd connection = new Connection_bd();
+        ConnectionBD connection = new ConnectionBD();
         try(Connection cnx = connection.get_connection()){
             
         }
