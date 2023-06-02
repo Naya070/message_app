@@ -13,15 +13,14 @@ import java.sql.SQLException;
  * @author naya
  */
 public class ConnectionBD {
-    public Connection get_connection(){
+    public Connection getConnection(){
         Connection connection = null;
         try{
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3307/Messages_Application","root","");
-            if(connection != null){
-                System.out.println("conexión exitosa");
-            }
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3307/MessagesApplication","root","");
+            
         }
         catch(SQLException e){
+            System.out.println("Clase connectionBD");
             System.out.println(e);
         }
         return connection;

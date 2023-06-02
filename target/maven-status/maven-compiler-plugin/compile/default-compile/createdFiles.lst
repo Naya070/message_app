@@ -1,2 +1,5 @@
-com/app/message_app/Connection_bd.class
-com/app/message_app/Message_app.class
+com/app/messageApp/MessageDAO.class
+com/app/messageApp/MessageService.class
+com/app/messageApp/Message.class
+com/app/messageApp/MessageApp.class
+com/app/messageApp/ConnectionBD.class

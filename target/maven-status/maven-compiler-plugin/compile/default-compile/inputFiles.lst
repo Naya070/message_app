@@ -1,2 +1,5 @@
-/home/naya/NetBeansProjects/message_app/src/main/java/com/app/message_app/Connection_bd.java
-/home/naya/NetBeansProjects/message_app/src/main/java/com/app/message_app/Message_app.java
+/home/naya/NetBeansProjects/message_app/src/main/java/com/app/messageApp/MessageDAO.java
+/home/naya/NetBeansProjects/message_app/src/main/java/com/app/messageApp/Message.java
+/home/naya/NetBeansProjects/message_app/src/main/java/com/app/messageApp/MessageService.java
+/home/naya/NetBeansProjects/message_app/src/main/java/com/app/messageApp/MessageApp.java
+/home/naya/NetBeansProjects/message_app/src/main/java/com/app/messageApp/ConnectionBD.java
