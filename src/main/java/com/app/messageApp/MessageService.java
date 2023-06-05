@@ -30,7 +30,25 @@ public class MessageService {
         MessageDAO.readMessageDB();
     }
     public static void deleteMessageService(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Indicates the ID of the message to delete");
+        int idMessage = sc.nextInt();
+        MessageDAO.deleteMessageDB(idMessage);
     }
     public static void updateMessageService(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Write your new message");
+        String message = sc.nextLine();
+        
+        System.out.println("Indicates the ID of the message to delete");
+        int idMessage = sc.nextInt();
+        Message actualization = new Message();
+        actualization.setIdMessage(idMessage);
+        actualization.setMessage(message);
+        MessageDAO.updateMessageDB(actualization);
+        
+
+
+        
     }
 }

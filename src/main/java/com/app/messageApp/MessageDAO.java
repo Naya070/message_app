@@ -26,6 +26,7 @@ public class MessageDAO {
             ps.executeUpdate();
             System.out.println("Message created successfully");}
             catch(SQLException e){
+                System.out.println("Message could not be created");
                 System.out.println(e);
             }
         }
@@ -65,7 +66,44 @@ public class MessageDAO {
         
     }
     public static void deleteMessageDB(int idMessage){
+        ConnectionBD dbConnect = new ConnectionBD();
+        try(Connection connection = dbConnect.getConnection()){
+            PreparedStatement ps = null;
+            try{
+            String query = "DELETE FROM messages WHERE `messages`.`idMessage` = ?";
+            ps = connection.prepareStatement(query);
+            ps.setInt(1, idMessage);
+            ps.executeUpdate();
+            System.out.println("Message erased successfully");}
+            catch(SQLException e){
+                System.out.println("Message could not be erased");
+                System.out.println(e);
+            }
+        }
+        catch(SQLException e){
+            System.out.println(e);
+        }
+
     }
-    public static void updateMessageDB(){
+    public static void updateMessageDB(Message message){
+        ConnectionBD dbConnect = new ConnectionBD();
+        try(Connection connection = dbConnect.getConnection()){
+            PreparedStatement ps = null;
+            try{
+            String query = "UPDATE `messages` SET `message` = ? WHERE `messages`.`idMessage` = ?";
+            ps = connection.prepareStatement(query);
+            ps.setString(1, message.getMessage());
+            ps.setInt(2, message.getIdMessage());
+            ps.executeUpdate();
+            System.out.println("Message updated successfully");}
+            catch(SQLException e){
+                System.out.println("Message could not be updated");
+                System.out.println(e);
+            }
+        }
+        catch(SQLException e){
+            System.out.println(e);
+        }
+
     }
 }
